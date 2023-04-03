@@ -6,11 +6,16 @@ import Home from "./pages/Home";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
+import PostSliceDetailsView from "./feature/postSliceDetails/PostSliceDetailsView";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "/post/:postId",
+    element: <PostSliceDetailsView />,
   },
 ]);
 ReactDOM.createRoot(document.getElementById("root")).render(
